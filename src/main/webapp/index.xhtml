@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>BestApp</title>
+</h:head>
+<h:body>
+	<div>
+		<p:dataTable var="authors" value="#{dataView.RESTResult}">
+
+			<p:column headerText="Imię">
+				<h:outputText value="#{authors.authorFirstName}"/>
+			</p:column>
+
+			<p:column headerText="Nazwisko">
+				<h:outputText value="#{authors.authorLastName}"/>
+			</p:column>
+
+			<p:column headerText="Kategoria">
+				<h:outputText value="#{authors.categoryName}"/>
+			</p:column>
+
+			<p:column headerText="Liczba książek">
+				<h:outputText value="#{authors.bookCount}"/>
+			</p:column>
+		</p:dataTable>
+	</div>
+</h:body>
+</html>
